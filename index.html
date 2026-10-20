@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#24135f" />
+  <meta name="description" content="POLIS — Build a society. Make the rules. Face the consequences." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>POLIS — Chapter One Prototype</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="brand" data-nav="home" aria-label="Go to home">
+        <span class="brand-mark">Π</span>
+        <span><strong>POLIS</strong><small>Build a society. Face the consequences.</small></span>
+      </button>
+      <div class="top-actions">
+        <button class="ghost" id="progressBtn">Progress</button>
+        <button class="ghost" id="resetBtn">Reset</button>
+      </div>
+    </header>
+
+    <main id="app" tabindex="-1"></main>
+
+    <footer class="footer">
+      <span>Prototype • Chapter One</span>
+      <span id="saveStatus">Progress saves on this device</span>
+    </footer>
+  </div>
+
+  <dialog id="progressDialog" class="dialog">
+    <button class="dialog-close" aria-label="Close" onclick="this.closest('dialog').close()">×</button>
+    <div id="progressContent"></div>
+  </dialog>
+
+  <template id="metricsTemplate">
+    <div class="metrics" aria-label="Civic indicators">
+      <div><span>Fairness</span><strong data-metric="fairness"></strong></div>
+      <div><span>Freedom</span><strong data-metric="freedom"></strong></div>
+      <div><span>Trust</span><strong data-metric="trust"></strong></div>
+      <div><span>Stability</span><strong data-metric="stability"></strong></div>
+      <div><span>Resources</span><strong data-metric="resources"></strong></div>
+    </div>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
